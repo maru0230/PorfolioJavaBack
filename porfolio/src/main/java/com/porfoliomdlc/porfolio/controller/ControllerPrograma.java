@@ -19,9 +19,11 @@ public class ControllerPrograma {
     
     @Autowired
     private IProgramaService programaServ;
+    
     @PostMapping("/new/programa")
-        public void agregarPrograma(@RequestBody Programa programa){
-         programaServ.crearPrograma(programa);
+    @ResponseBody
+        public Programa agregarPrograma(@RequestBody Programa programa){
+         return programaServ.crearPrograma(programa);
     }
     
     

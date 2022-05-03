@@ -18,8 +18,8 @@ public class ProgramaService implements IProgramaService {
     }
 
     @Override
-    public void crearPrograma(Programa programa) {
-        programaRepo.save(programa);
+    public Programa crearPrograma(Programa programa) {
+        return programaRepo.save(programa);
     }
 
     @Override
