@@ -20,8 +20,9 @@ public class ControllerIdioma {
      @Autowired
     private IIdiomaService idiomaServ;
     @PostMapping("/new/idioma")
-        public void agregarIdioma(@RequestBody Idioma idioma){
-         idiomaServ.crearIdioma(idioma);
+     @ResponseBody
+        public Idioma agregarIdioma(@RequestBody Idioma idioma){
+        return idiomaServ.crearIdioma(idioma);
     }
     
     

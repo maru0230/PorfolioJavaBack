@@ -22,8 +22,9 @@ public class ControllerExperiencia {
     private IExperienciaService expServ;
     
     @PostMapping("/new/experiencia")
-    public void agregarExperiencia (@RequestBody Experiencia exp){
-        expServ.crearExperiencia(exp);
+     @ResponseBody
+    public Experiencia agregarExperiencia (@RequestBody Experiencia exp){
+        return expServ.crearExperiencia(exp);
     }
     
     @GetMapping ("/ver/experiencia")

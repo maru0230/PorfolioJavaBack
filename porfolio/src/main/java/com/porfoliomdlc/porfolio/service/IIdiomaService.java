@@ -8,7 +8,7 @@ import java.util.List;
 public interface IIdiomaService {
     
     public List<Idioma> verIdioma();
-    public void crearIdioma(Idioma idioma);
+    public Idioma crearIdioma(Idioma idioma);
     public void editarIdioma(Idioma idioma); 
     public void borrarIdioma(Long id);
     public Idioma buscarIdioma(Long id);

@@ -20,8 +20,8 @@ public class ControllerHabilidad {
     @Autowired
     private IHabilidadService habilidadServ;
     @PostMapping("/new/habilidad")
-        public void agregarHabilidad(@RequestBody Habilidad habilidad){
-         habilidadServ.crearHabilidad(habilidad);
+        public Habilidad agregarHabilidad(@RequestBody Habilidad habilidad){
+        return habilidadServ.crearHabilidad(habilidad);
     }
     
     

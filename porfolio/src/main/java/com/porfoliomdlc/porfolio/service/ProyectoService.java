@@ -18,8 +18,8 @@ public class ProyectoService implements IProyectoService {
     }
 
     @Override
-    public void crearProyecto(Proyecto proyecto) {
-        proyectoRepo.save(proyecto);
+    public Proyecto crearProyecto(Proyecto proyecto) {
+        return proyectoRepo.save(proyecto);
     }
 
     @Override

@@ -19,8 +19,8 @@ public class EstudiosService implements IEstudiosService {
     }
 
     @Override
-    public void crearEstudios(Estudios est) {
-        estRepo.save(est);
+    public Estudios crearEstudios(Estudios est) {
+        return estRepo.save(est);
     }
 
     @Override

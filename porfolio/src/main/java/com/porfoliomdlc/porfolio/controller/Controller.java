@@ -22,9 +22,11 @@ public class Controller {
     
     @Autowired
     private IPersonaService persoServ;
+    
     @PostMapping("/new/persona")
-        public void agregarPersona(@RequestBody Persona pers){
-         persoServ.crearPersona(pers);
+    @ResponseBody
+        public Persona agregarPersona(@RequestBody Persona pers){
+         return persoServ.crearPersona(pers);
     }
     
     

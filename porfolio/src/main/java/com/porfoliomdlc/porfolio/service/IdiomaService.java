@@ -19,8 +19,8 @@ public class IdiomaService implements IIdiomaService {
     }
 
     @Override
-    public void crearIdioma(Idioma idioma) {
-        idiomaRepo.save(idioma);
+    public Idioma crearIdioma(Idioma idioma) {
+        return idiomaRepo.save(idioma);
     }
 
     @Override

@@ -22,8 +22,8 @@ public class ControllerEstudios {
     
     @PostMapping("/new/estudios")
     @ResponseBody
-    public void agregarEstudios (@RequestBody Estudios est){
-         estServ.crearEstudios(est);
+    public Estudios agregarEstudios (@RequestBody Estudios est){
+         return estServ.crearEstudios(est);
     }
     
      @PutMapping("/editar/estudios")
